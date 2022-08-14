@@ -24,9 +24,9 @@
   </head>
   <body>
     <main class="h-screen flex justify-center items-center bg-[#5b5ee9]">
-      <div class="bg-white max-w-[320px] rounded-lg mx-1">
+      <div class="bg-[#ffffff] max-w-[320px] rounded-lg mx-1">
         <div
-          class="p-8 py-4 flex justify-between items-center bg-gray-300 w-full rounded-t-lg"
+          class="p-8 py-4 flex justify-between items-center bg-[#fcfcff] w-full rounded-t-lg"
         >
           <div>
             <p class="text-[#5b5ee9] text-xl font-bold mb-3">Monday, 15th</p>
@@ -44,10 +44,17 @@
             </button>
           </div>
         </div>
+        <hr class="border-1 border-gray-200" />
         <div class="flex justify-between my-4 px-8">
-          <input type="text" id="todo-item" name="todo-item" />
+          <input
+            class="bg-gray-200 rounded pl-4"
+            type="text"
+            id="todo-item"
+            name="todo-item"
+            placeholder="Enter Text Here"
+          />
           <button
-            class="rounded bg-[#fb6f70] text-white py-1 px-2 font-bold ml-4"
+            class="rounded bg-[#5b5ee9] text-white py-1 px-2 font-bold ml-4"
             id="add-button"
           >
             Add

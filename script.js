@@ -16,14 +16,18 @@ button.addEventListener('click', function(){
     const inputBox = document.getElementById('todo-item')
     li.innerHTML = `
     <div class="px-8 py-4 flex justify-between">
-    <span class="text-gray-500">${inputBox.value}</span>
+    <div class= "flex items-center">
+        <input class="text-gray-500 pr-2 bg-red-200" type="checkbox" name="list-item" value="list-item">
+        <label class="ml-3 text-gray-500">${inputBox.value}</label>
+        </input>
+    </div>
     <button class='remove-btn text-red-700 text-2xl'><i class="fa-solid fa-circle-xmark"></i></button>
     </div>
     `
     listContainer.prepend(li)
     inputBox.value = '';
 
-    const removeBtns = document.getElementsByClassName('remove-btn')
+    const removeBtns = document.querySelectorAll('.remove-btn')
     for (const removeBtn of removeBtns){
         removeBtn.addEventListener('click', function(e){
             e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode)
@@ -44,7 +48,3 @@ button.addEventListener('click', function(){
     })
 
 })
-
-// Date and Month
-const d = new Date();
-console.log(d.getMonth())
