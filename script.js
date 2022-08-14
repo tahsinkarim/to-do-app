@@ -35,6 +35,7 @@ button.addEventListener('click', function(){
     const clearAll = document.getElementById('clear-button')
     clearAll.addEventListener('click', function(){
         li.remove()
+        taskNumber.innerText = 0 + ' ' + 'Task'
     })
 
 })
