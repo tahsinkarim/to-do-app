@@ -3,8 +3,12 @@
 const button = document.getElementById('add-button')
 
 
+const taskNumber = document.getElementById('task-number')
+
 
 button.addEventListener('click', function(){
+    
+    
     const listContainer = document.getElementById('list-container')
     
     const li = document.createElement('li')
@@ -23,21 +27,24 @@ button.addEventListener('click', function(){
     for (const removeBtn of removeBtns){
         removeBtn.addEventListener('click', function(e){
             e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode)
+            taskNumber.innerText = parseInt(taskNumber.innerText) - 1
         })
     }
 
 
-    const taskNumber = document.getElementById('task-number')
+    
     const listItems = document.getElementsByClassName('list-class')
-    taskNumber.innerText = listItems.length + ' ' + 'Tasks'
+    taskNumber.innerText = parseInt(taskNumber.innerText) + 1;
     
 
     const clearAll = document.getElementById('clear-button')
     clearAll.addEventListener('click', function(){
         li.remove()
-        taskNumber.innerText = 0 + ' ' + 'Task'
+        taskNumber.innerText = 0
     })
 
 })
 
-
+// Date and Month
+const d = new Date();
+console.log(d.getMonth())
